@@ -3,3 +3,36 @@
 
 Open the terminal and type the command given below to download the TestNG. 
 wget http://www.java2s.com/Code/JarDownload/testng/testng-6.8.7.jar.zip
+package test;
+import org.testng.annotations.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+
+
+
+
+
+
+public class testngfirst{
+public String baseUrl = "https://www.google.com/";
+String driverPath = "Path_To_Your_Chrome_Driver";
+public WebDriver driver ;
+@BeforeTest
+public void launchBrowser() {
+System.out.println("launching Chrome browser");
+System.setProperty("webdriver.chrome.driver", driverPath);
+driver = new ChromeDriver();
+driver.get(baseUrl);
+}
+@Test
+public void verifyHomepageTitle() {
+String expectedTitle = "Google";
+String actualTitle = driver.getTitle();
+Assert.assertEquals(actualTitle, expectedTitle);
+}
+@AfterTest
+public void terminateBrow
+
