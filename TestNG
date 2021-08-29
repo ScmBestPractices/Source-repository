@@ -1,0 +1,5 @@
+1.	Download and set up TestNG
+2.	Integrate TestNG in Eclipse
+
+Open the terminal and type the command given below to download the TestNG. 
+wget http://www.java2s.com/Code/JarDownload/testng/testng-6.8.7.jar.zip
