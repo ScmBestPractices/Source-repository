@@ -3,6 +3,8 @@
 
 Open the terminal and type the command given below to download the TestNG. 
 wget http://www.java2s.com/Code/JarDownload/testng/testng-6.8.7.jar.zip
+
+
 package test;
 import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
@@ -10,11 +12,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-
-
-
-
-
 
 public class testngfirst{
 public String baseUrl = "https://www.google.com/";
@@ -34,5 +31,7 @@ String actualTitle = driver.getTitle();
 Assert.assertEquals(actualTitle, expectedTitle);
 }
 @AfterTest
-public void terminateBrow
-
+public void terminateBrowser(){
+driver.close();
+}
+}
