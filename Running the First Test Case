@@ -12,5 +12,5 @@ public class first {
         driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get("https://login.yahoo.com");
-        driver.findElement(By.xpath("//input[@id='login-username']")).sendKeys("xyzz@yahoo.com"
+        driver.findElement(By.xpath("//input[@id='login-username']")).sendKeys("xyzz@yahoo.com")
 
