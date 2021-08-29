@@ -1,28 +1,13 @@
-package test;
-import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-public class first {
-    public static void main(String[] args) throws InterruptedException{
-        System.setProperty("webdriver.chrome.driver", "/Path_To_Your_Chrome_Driver");
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().deleteAllCookies();
-        driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.get("https://login.yahoo.com");
-        driver.findElement(By.xpath("//input[@id='login-username']")).sendKeys("xyzz@yahoo.com")
-
-----
 package SeleniumApp;
+
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 public class SeleniumApp {
-    public static void main(String[] args) throws InterruptedException{
-        System.setProperty("webdriver.chrome.driver", "/home/aalmusnadmobily/Downloads");
+	public static void main(String[] args) throws InterruptedException{
+        System.setProperty("webdriver.chrome.driver", "//home//aalmusnadmobily//Downloads//chromedriver");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
@@ -30,18 +15,14 @@ public class SeleniumApp {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get("https://login.yahoo.com");
         driver.findElement(By.xpath("//input[@id='login-username']")).sendKeys("xyzz@yahoo.com");
-        
-        }
-      }
+    }
+}
+
 
 Result
-Exception in thread "main" java.lang.IllegalStateException: The driver executable is a directory: /home/aalmusnadmobily/Downloads
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:148)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
-	at SeleniumApp.SeleniumApp.main(SeleniumApp.java:9)
+Starting ChromeDriver 90.0.4430.24 (4c6d850f087da467d926e8eddb76550aed655991-refs/branch-heads/4430@{#429}) on port 7695
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Aug 29, 2021 7:48:30 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
