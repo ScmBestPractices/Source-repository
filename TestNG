@@ -5,7 +5,7 @@ Open the terminal and type the command given below to download the TestNG.
 wget http://www.java2s.com/Code/JarDownload/testng/testng-6.8.7.jar.zip
 
 
-package test;
+package TestNg_Lab;
 import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,9 +13,9 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
-public class testngfirst{
+public class TestNg_lab{
 public String baseUrl = "https://www.google.com/";
-String driverPath = "Path_To_Your_Chrome_Driver";
+String driverPath = "//home//aalmusnadmobily//Downloads//chromedriver";
 public WebDriver driver ;
 @BeforeTest
 public void launchBrowser() {
@@ -35,3 +35,19 @@ public void terminateBrowser(){
 driver.close();
 }
 }
+
+
+
+Result 
+
+===============================================
+Default suite
+Total tests run: 1, Failures: 0, Skips: 0
+===============================================
+
+[TestNG] Time taken by org.testng.reporters.EmailableReporter2@4c203ea1: 7 ms
+[TestNG] Time taken by org.testng.reporters.jq.Main@3f0ee7cb: 70 ms
+[TestNG] Time taken by [FailedReporter passed=0 failed=0 skipped=0]: 1 ms
+[TestNG] Time taken by org.testng.reporters.SuiteHTMLReporter@6debcae2: 5 ms
+[TestNG] Time taken by org.testng.reporters.XMLReporter@2d209079: 2 ms
+[TestNG] Time taken by org.testng.reporters.JUnitReportReporter@58ceff1: 2 ms
